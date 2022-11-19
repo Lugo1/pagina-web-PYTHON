@@ -18,7 +18,7 @@ def homepage():
     return render_template("homepage.html")
     #return "Mi primera página WEB...mis primeros pasos...123"
 
-@app.route("/contactos", methods=["POST", "GET"])
+@app.route("/greet", methods=["POST", "GET"])
 def nombres():
     flash("Hola!" + str(request.form['name_input']) + ", Gracias por comentar!")
     return render_template("homepage.html")
