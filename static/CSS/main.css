@@ -1,5 +1,10 @@
-body {
-    background-color: slategray;
+h1{
+    color:white;
+    font-size: 70px;
+}
+
+body{
+    background: slate-gray;
     text-align: center;
 
 }
