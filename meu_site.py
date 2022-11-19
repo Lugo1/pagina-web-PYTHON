@@ -1,6 +1,4 @@
 from flask import Flask, render_template
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 
 # Render_Template es para que visualize lo que esta en HTML y no en .py
 #Flask recomienda que nombrees con "app"
