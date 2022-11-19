@@ -1,9 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
 
 # Render_Template es para que visualize lo que esta en HTML y no en .py
 #Flask recomienda que nombrees con "app"
 
 app = Flask(__name__)
+app.secret_key = "Conttraseña_o_cualquier_otro"
 ###################### Criar a 1era pagina do site######################
 # Toda pagina Web tiene siempre un: ROUTE y una FUNCION
 #ROUTE: es el camino que tienes que pasar despues del corchet "/"..... Lugo.com/
@@ -13,17 +14,22 @@ app = Flask(__name__)
 #...
 @app.route("/")
 def homepage():
+    flash("Cúal es tu nombre?")
     return render_template("homepage.html")
     #return "Mi primera página WEB...mis primeros pasos...123"
 
-@app.route("/contactos")
+@app.route("/contactos", methods=["POST", "GET"])
 def nombres():
-    return render_template("nombres.html")
+    flash("Hola!" + str(request.form['name_input'] + ", Gracias por comentar!"))
+    return render_template("homepage.html")
+    #return render_template("nombres.html")
     #return "<p>1. Juan...</p><p>2. Emi... </p><p>3. Jona </p>EMAIL: @@@"
 
 @app.route("/usuarios/<nome_usuario>")
 def usuarios(nome_usuario):
     return render_template("usuarios.html", nome_usuario=nome_usuario)
+
+
 
 
 ####################### ultimo colocar o site no ar######################
