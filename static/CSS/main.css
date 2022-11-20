@@ -4,7 +4,7 @@ h1{
 }
 
 body{
-    background-color: white;
+    background-color: snow;
     text-align: center;
 }
 
@@ -16,7 +16,7 @@ p{
 }
 
 img{
-    margin: 70px 0 40px 0;
+    margin: 90px 0 60px 0;
     width: 250px;
 }
 
@@ -38,7 +38,7 @@ input:focus {
 
 #greet {
     background-color:palevioletred;
-    color: peru;
+    color: white;
     width: 200px;
 }
 
