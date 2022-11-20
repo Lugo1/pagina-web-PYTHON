@@ -20,7 +20,7 @@ def homepage():
 
 @app.route("/greet", methods=["POST", "GET"])
 def nombres():
-    flash("Waooo!!! : " )
+    flash("Waoo!!!" )
     flash(" <" + str(request.form['name_input']) + "> ")
     flash("Gracias!")
     flash("Pareces inteligente!")
