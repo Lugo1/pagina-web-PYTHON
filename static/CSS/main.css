@@ -4,7 +4,7 @@ h1{
 }
 
 body{
-    background-color: snow;
+    background-color: linen;
     text-align: center;
 }
 
@@ -17,7 +17,7 @@ p{
 
 img{
     margin: 90px 0 60px 0;
-    width: 350px;
+    width: 300px;
 }
 
 input{
