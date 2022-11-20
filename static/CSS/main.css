@@ -10,7 +10,7 @@ body{
 
 p{
     color: tomato;
-    font: shanti;
+    font-family: Shanti;
     font-size: 1.4em;
     margin: 20px;
 }
@@ -26,14 +26,19 @@ input{
     margin: 20px;
     border: none;
     border-radius: 10px;
-    font: Shanti;
+    font-family: Shanti;
     text-align: center;
     font-size: 1.3em;
 }
 
+input:focus {
+    border: solid 4px #00FFCE;
+    outline: none;
+}
+
 #greet {
     background-color:palevioletred;
-    color: white;
+    color: peru;
     width: 200px;
 }
 
