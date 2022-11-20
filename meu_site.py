@@ -21,7 +21,7 @@ def homepage():
 @app.route("/greet", methods=["POST", "GET"])
 def nombres():
     flash("Waooo!!! " )
-    flash(" " " + str(request.form['name_input']) + " " ")
+    flash(" < " + str(request.form['name_input']) + " > ")
     flash("Gracias por comentar!")
     flash("Pareces inteligente!")
     flash("😂 🤭")
