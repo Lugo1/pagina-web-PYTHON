@@ -1,8 +1,21 @@
 from flask import Flask, render_template, request, flash
-
+import pandas as pd
+import plotly.express as px
 # Render_Template es para que visualize lo que esta en HTML y no en .py
 #Flask recomienda que nombrees con "app"
-
+df= pd.read_json('http://api.open-notify.org/iss-now.json')
+latitude = df.loc['latitude', 'iss_position']
+longitude = df.loc['longitude', 'iss_pisition']
+position = {
+    'latitude': [latitude],
+    'longitude': [longitude]
+}
+#Ahora criamos el grafico:
+px.scatter_geo(
+    position,
+    lat = position['latitude'],
+    lon = position['logitude']
+)
 app = Flask(__name__)
 app.secret_key = "Conttraseña_o_cualquier_otro"
 ###################### Criar a 1era pagina do site######################
