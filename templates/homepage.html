@@ -22,6 +22,20 @@
               <input type="text" value="..." name="name_input">
               <br>
               <input type="submit" value="COMENTAR" id="greet">
+
+                df= pd.read_json('http://api.open-notify.org/iss-now.json')
+                latitude = df.loc['latitude', 'iss_position']
+                longitude = df.loc['longitude', 'iss_pisition']
+                position = {
+                    'latitude': [latitude],
+                    'longitude': [longitude]
+                }
+                #Ahora criamos el grafico:
+                px.scatter_geo(
+                    position,
+                    lat = position['latitude'],
+                    lon = position['logitude']
+                )
         </form>
         </div>
     </body>
