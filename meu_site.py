@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash
-import pandas as pd
+#import pandas as pd
 #import plotly.express as px
 # Render_Template es para que visualize lo que esta en HTML y no en .py
 #Flask recomienda que nombrees con "app"
