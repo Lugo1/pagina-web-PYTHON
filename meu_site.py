@@ -20,7 +20,6 @@ app.secret_key = "Conttraseña_o_cualquier_otro"
 @app.route("/")
 def homepage():
     flash("Cúal es tu nombre?")
-    flash(df)
     return render_template("homepage.html")
     #return "Mi primera página WEB...mis primeros pasos...123"
 
@@ -31,8 +30,9 @@ def nombres():
     flash("Gracias!")
     flash("Pareces inteligente!")
     flash("😂 🤭")
-    return render_template('homepage.html', tables=[df.to_html(classes='data')], titles=df.columns.values)
-    #return render_template("homepage.html")
+    flash(df)
+    #return render_template('homepage.html', tables=[df.to_html(classes='data')], titles=df.columns.values)
+    return render_template("homepage.html")
     #return render_template("nombres.html")
     #return "<p>1. Juan...</p><p>2. Emi... </p><p>3. Jona </p>EMAIL: @@@"
 
