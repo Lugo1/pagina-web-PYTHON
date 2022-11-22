@@ -1,9 +1,14 @@
 from flask import Flask, render_template, request, flash
 #import pandas as pd
 #import plotly.express as px
+#import numpy as np
+import pandas as pd
 # Render_Template es para que visualize lo que esta en HTML y no en .py
 #Flask recomienda que nombrees con "app"
 app = Flask(__name__)
+df = pd.DataFrame({'A': [0, 1, 2, 3, 4],
+                   'B': [5, 6, 7, 8, 9],
+                   'C': ['a', 'b', 'c--', 'd', 'e']})
 app.secret_key = "Conttraseña_o_cualquier_otro"
 ###################### Criar a 1era pagina do site######################
 # Toda pagina Web tiene siempre un: ROUTE y una FUNCION
@@ -15,6 +20,7 @@ app.secret_key = "Conttraseña_o_cualquier_otro"
 @app.route("/")
 def homepage():
     flash("Cúal es tu nombre?")
+    flash(df)
     return render_template("homepage.html")
     #return "Mi primera página WEB...mis primeros pasos...123"
 
