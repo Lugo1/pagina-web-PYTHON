@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, flash
-import pandas as pd
+#import pandas as pd
 #import plotly.express as px
 # Render_Template es para que visualize lo que esta en HTML y no en .py
 #Flask recomienda que nombrees con "app"
 app = Flask(__name__)
 app.secret_key = "Conttraseña_o_cualquier_otro"
-datos = pd.Series(['Casillas', 'Ramos', 'Pique', 'Puyol'], index=[1, 15, 3, 5])
+#datos = pd.Series(['Casillas', 'Ramos', 'Pique', 'Puyol'], index=[1, 15, 3, 5])
 
 ###################### Criar a 1era pagina do site######################
 # Toda pagina Web tiene siempre un: ROUTE y una FUNCION
