@@ -26,7 +26,7 @@ def nombres():
     flash(" <" + str(request.form['name_input']) + "> ")
     flash("Gracias!")
     flash("Pareces inteligente!")
-    flash("😂 🤭")
+    flash("😂 🤭 😂 🤭")
     return render_template("homepage.html")
     #return render_template("nombres.html")
     #return "<p>1. Juan...</p><p>2. Emi... </p><p>3. Jona </p>EMAIL: @@@"
