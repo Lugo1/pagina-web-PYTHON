@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='CSS/style.css')}}" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Página Web Lugo</title>
+    <!-- BOOTSTRAP 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--PARA BOTON DEL MENU COPIDO DE BOOTSTRAP-->
+
+    <!--<nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PYTHON WEB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('trabajos') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
+
+    <!--PARA BOTON DEL MENU COPIDO DE BOOTSTRAP -->
+    <header>
+        <div class="center">
+            <luz class="logo">
+                <img src="https://lh3.googleusercontent.com/JAToh7boDBc3e9LDaP-lSrdYujtKOxeyHN10unfmUhT7GFFc7qAYNFluyzgoeKjkU3zWxyCjiv4YZoQ3KdiDvdwyUDmimclfMUZO3M_n43-Z7W-pKkQbUqteCn76eTyxQZiI2PwRfz8pAohrHrkQkiYqdOdlInxRU-fnFYxN5mb-kZOSGAJmdFbmrgV__vAeI5ILUiASOGaBkK4M6zDYyfZOh2XdCIMfcYiyI0ilV42TdL6hZ0ML6XYoGUV6OQKRxaA26DWSbjN1Axloe7_fhb01LHjx2TXdduDVha7VR03P2bRQNcKaTuiXE6BY0IIUkAdWalm92mOu-IqAX8dV1GXcGCuzEnB67uMsUpv65c_A1uWBIbyzXoT5IFHNPl9HCzKKUz6TsmcUpar1yahzUX-37p3B8hmAkxBa6oIgD1Jy9dlgX67M-a8DrXh5Xz7T52DWFd7MfVqlsXurwH8Sddnie_DRtR_unbWaCTbIR4u-N06YG0rav1ic9PAzebn9JgdEhFME4YtunMSG9_0s2DGRbgtRBhF0qDBajdp2j9LVeBLoa06eWJE_AqYqcsuGLL26KtPy1_Z5yK0sf7qT_KtgPLpgY5j8qU8NhAw_-ef009aww0C9DvAk5KFd2VtrENjL2eWzS1c-BQfrgfGNqNssdfhujDOs-XwTFnR4_LMNwsDLDMb34suiE4O_PD-EnfBfTgLptIyVMWAYQNEuRYbo49GuU55znkYnCXQxoseKXIGVKS0Vm5GJgy1YS78vwsEqFN1afUgWSxJqfbb5ueUKvdcNSUhFQviYpA_Az7rDbOxahkbDMXM8ZiHXK3D7frUquW9bvxAgPiSRyih5qzwg4kef0BNcMD9-TFYPGImPuS44dl5W5JezgZgeTuL0l4IMXnv2lbe5QElFMe4im4eVvS87kii5gwmz-oQuztmj=s612-no?authuser=0"
+                    width="100" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Escudo_de_la_UNSCH.png" width="80" />
+                <img src="https://www.uerj.br/wp-content/uploads/2018/02/cropped-logomarca-uerj.png" width="105" />
+                <img src="https://mundodecursos.com.br/wp-content/uploads/2020/02/senai-rj-1.jpg" width="180" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/800px-Python.svg.png" width="105" />
+            </luz>
+            <ul class="nav">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="{{ url_for('biografia') }}">Biografía</a></li>
+                <li><a href="{{ url_for('investigaciones') }}">Investigaciones</a></li>
+                <li><a href="{{ url_for('trabajos') }}">Trabajos</a></li>
+                <li><a href="{{ url_for('otros') }}">Otros</a></li>
+            </ul><!--menu-->
+        </div><!--center-->
+    </header>
+    <section class="sobre">
+        <div class="extras">
+            <img
+                src="https://lh3.googleusercontent.com/TWNER2wg4H_NV_mZM-fv0nHAt__RVNRfedaFPHX7aG84oNGRsaAR35IMGFUl1dD7Nbm277m1fdqQKGAjOTOdRGFoYYdaURJxHgceyShEEtmezzXdKwsZ1x1l9ie0-nkNuvcJBqGk8g8GZRy-swkID5EsLXrga06OOU_fTuEwzJMSKrbKjpQqjMEIwWxzxHMJ-aBjUKk_Mh6Qohk1uQipAwZ1I9pU3RCUG8XvuyVecVRFuy6R-xB7haLY0M7_bfwhA7Oq2IU0Gd9vArE3Zjl5jKr7cd7tPMDgCOpPa9SL4X-_BaOhbE__S4SHdwpuKdZLfpAoP-4m8D_QBLuSIYUGZN6eL7v-PkGEfz4HhyTxyw9QPcUTGhmCbCnhsXs00Up1gb9yApTNVPmBXtdpOOCE731jjQiSKyS0zIJE-DCRS9s_Zb0qaWwwpe3lwf8Zc0C2nJIo3ziZmatOk3Wkbxdq0nZPRYoC_LyxAlkTRxzESrg90CRWxX11dbmIx56lto_K0vVnDZ79_H6QK3e-KgfOrNewBS9XFb68LR4TcBG-H_jdLPrj0EpVgbIaZBfUug9--iZjTlaHVOWx419zmCQPAUHuo8CDbLMwEwZFGhg1_bOM8Y9ksxqdhgjKVWAvVTcI1gWOPtUM97cjis7HjRvThIOQvR43to-Fl3LVm17BzzKQMgbr3jZcH84yN6_LAQyBybGtLTe3QRed3tQMyDAaBYWKvwGjODR1sBpbzVXZIAycPJBejHJcvLKV5v5HPZzhzZwt15yAOIz8BAyIuSD74O-lh7OwPe_juPA07WctVKEs0oyIP2jsXDle1M6xMIinNxHfHsYAvam5x6FkwPrAmfIBNtnYMUuWOEjOjho2QgDuGmH5mm6AAleFeMzLWl_bdV0nmC7eE7TuOdPMGgD2CfeIauJ6z-p5c7CN9ckmWwDe=s357-no?authuser=0">
+                <br/> 
+                <p>
+                    <span style="color: rgb(255, 255, 255);" font-size="60px;"> &nbsp &nbsp &nbsp “A imaginação é mais importante que o conhecimento.<br/>
+                        &nbsp &nbsp &nbsp O conhecimento é limitado. A imaginação envolve o mundo.”</span>
+                   <br/> <span style="color: rgb(128, 128, 229);" font-size="60px;">&nbsp &nbsp &nbsp (Abert Einstein.)</span>
+                </p>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com/lugo.hinofar/" class="social-media-icon">
+                    <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="https://twitter.com/LugoN01" class="social-media-icon">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="https://www.instagram.com/lhugo_rio/" class="social-media-icon">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCbW-GfLb9gGALI_3o3Dd4zg" class="social-media-icon">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+                <a href="https://www.linkedin.com/feed/?trk=onboarding-landing" class="social-media-icon">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+            </div>
+        </div><!--extras-->
+        
+    <!-- ESTO LO QUE HACE ES DARLE CONTINUIDAD A OTRA SECCION DE LA PAG WEB-->
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

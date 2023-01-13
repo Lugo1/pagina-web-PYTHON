@@ -16,28 +16,36 @@ app.secret_key = "Conttraseña_o_cualquier_otro"
 #...
 @app.route("/")
 def homepage():
-    flash("Cúal es tu nombre?")
+    #flash("Cúal es tu nombre?")
     return render_template("homepage.html")
     #return "Mi primera página WEB...mis primeros pasos...123"
 
 @app.route("/greet", methods=["POST", "GET"])
 def nombres():
-    flash("Waoo!!!" )
-    flash(" <" + str(request.form['name_input']) + "> ")
-    flash("Gracias!")
-    flash("Pareces inteligente!")
-    flash("😂 🤭")
-    return render_template("homepage.html")
+    #flash("Waoo!!!" )
+    flash(" '' " + str(request.form['name_input']) + " '' ")
+    flash("¡Muchas Gracias!")
+    #flash("Pareces inteligente!")
+    #flash("😂 🤭")
+    return render_template("nombres.html")
     #return render_template("nombres.html")
     #return "<p>1. Juan...</p><p>2. Emi... </p><p>3. Jona </p>EMAIL: @@@"
 
-@app.route("/usuarios/<nome_usuario>")
-def usuarios(nome_usuario):
-    return render_template("usuarios.html", nome_usuario=nome_usuario)
+@app.route("/Biografia")
+def biografia():
+    return render_template("biografia.html")
 
+@app.route("/Investigaciones")
+def investigaciones():
+    return render_template("investigaciones.html")
 
+@app.route("/Trabajos")
+def trabajos():
+    return render_template("trabajos.html")
 
-
+@app.route("/Otros")
+def otros():
+    return render_template("otros.html")
 ####################### ultimo colocar o site no ar######################
 # Colocaremos este Site en el servidor: "heroku" este es gratuito
 # Quien coloca en el aire?--> este comando "app.run()"

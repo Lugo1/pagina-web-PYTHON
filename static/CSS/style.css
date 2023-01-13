@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px; /*PARA AUMENTAR EL ANCHO */
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+html,body{
+    height: 100%;
+    /*overflow-y: hidden; ...PARA NO DESLIZAR LA PANTALLA    */
+    overflow-x: hidden;
+}
+
+header{
+    height: 175px; /*PARA SUBIR BAJAR TODAS LAS LETRAS Y EL CIRCULO AZUL*/
+    padding: 30px 0; /*PARA SUBIR BAJAR MENU Y FOTO PEQUEÑA */
+}
+
+.logo{
+    width: 50%;
+    padding: 0px 0; /*PARA SUBIR BAJAR MENU Y FOTO PEQUEÑA */
+    animation: 1s clockwise infinite; 
+    animation: 2s counterclockwise infinite;
+}
+
+.menu{
+    padding-top: 35px;
+    width: 50%;
+    text-align: right;
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 65px;
+}
+
+section.sobre{
+    height: calc(100% - 200px);
+    position: relative;
+}
+
+.extras{
+    position: absolute;
+    bottom: -20px;
+    right: -240px;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: rgb(24, 38, 158);
+}
+
+.foticos:hover {filter: opacity(.100);} /*{filter: blur(5px);}.....para desenfocar*/
+
+/*Iconoso de redes sociales*/
+.social-media{
+    position: absolute;
+    bottom: 150px; /*PARA MOVER ARRIBA-ABAJO*/
+    right: 280px; /*PARA MOVER A LA IZQUIERDA*/
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 50px; /*Para separar los circulos*/
+    width: 25px; /*Para agrandar el circulo*/
+    height: 25px; /*Para agrandar el circulo*/
+    border: 3px solid rgb(76, 67, 199); /*para aumentar los pixels del circulo*/
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(246, 235, 247);
+}
+
+/*.social.media img{
+    display: block;
+    width: 20px;
+    margin: 20px 0;
+}*/
+
+.texto-sobre{
+    margin-top: 150px; /*PARA BAJAR O SUBIR TODO EL TEXTO*/
+}
+
+.texto-sobre h1{
+    font-size: 60px;
+}
+
+.texto-sobre p{
+    margin: 30px 0; /*MARGEN ENTRE EL TITULO Y EL BOTON DEL TEXTO CENTRAL...PARA SEPARAR*/
+    color: black;
+    font-size: 20px; /*PARA AGRANDAR EL TEXTO*/
+    font-weight: bold;
+    max-width: 800px; /*PARA EL ANCHO DEL TEXTO*/
+}
+
+.texto-sobre button{
+    border: 0;
+    background-color: rgb(24, 38, 158);
+    color: aliceblue;
+    border-radius: 20px; /*PARA BODES DEL BOTTON*/
+    width: 150px; /*PARA LARGURA DEL BOTTON*/
+    height: 30px; /*PARA ALTURA DEL BOTTON*/
+    cursor: pointer; /*PARA VER QUE ES CLIKCABLE*/
+}
+
+input{
+    position: absolute;
+    background-color: rgb(223, 223, 243);
+    color: darkviolet;
+    width: 300px;
+    height: 50px;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: Shanti;
+    text-align: center;
+    font-size: 1.1em; /*TAMAÑO DE LETRA DEL BOTTON*/
+    right: 1080px; /*PARA MOVER A LA IZQUIERDA*/
+}
+
+input:focus {
+    border: solid 2px #0a17d4; /*PARA LA LINEA DE LOS BORDES DE LA CAJA DE MSJ*/
+    outline: none;
+}
+
+#greet {
+    position: absolute;
+    background-color: rgb(24, 38, 158);
+    color: white;
+    width: 150px;
+    height: 30px;
+    font-family: Verdana;
+    border-radius: 20px; /*PARA BODES DEL BOTTON*/
+    right: 1150px; /*PARA MOVER A LA IZQUIERDA*/
+    bottom: 70px; /*PARA MOVER ARRIBA-ABAJO*/
+    text-align: center;
+}
+
+#greet:hover {
+    background-color: mediumvioletred;
+    cursor: pointer;
+}
+
+X{
+    color: green;
+    font-family: Shanti;
+    font-size: 2.6em;
+    margin: 25px;
+}
+/*..........EFECTOS VERDES...................EFECTOS...................EFECTOS.........*/
+.nav * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+  }
+  
+.nav li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 1em;
+    paddin: 0;
+  }
+  
+.nav a {
+    padding: .5em .8em;
+    color: rgb(1, 2, 8);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+.nav a::before,
+.nav a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+.nav a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #0d37c0;
+    border-right: 3px solid #0d37c0;
+    transform: translate(-100%, 50%);
+  }
+  
+.nav a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #0d37c0;
+    border-left: 3px solid #0d37c0;
+    transform: translate(100%, -50%)
+  }
+  
+.nav a:hover:before,
+.nav a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+.nav a:hover{
+    color: #0d37c0;
+  }
+/*..........EFECTOS VERDES...................EFECTOS...................EFECTOS.........*/
+
+
+/*..........EFECTOS LUZ...................EFECTOS...................EFECTOS.........*/
+luz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 250px;
+    height: 250px;
+    background: white;
+    border-radius: 75px;
+    transition: 1s box-shadow;
+  }
+  
+  luz:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  }
+  
+  luz:hover::before, luz:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #3705ad;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  
+  luz:hover:after {
+    background: #c30be7;
+    animation: 2s counterclockwise infinite;
+  }
+  /*CARACTERISTICAS DE MOVIMIENTO*/
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+/*CARACTERISTICAS DE MOVIMIENTO*/
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
+/*..........EFECTOS LUZ...................EFECTOS...................EFECTOS.........*/
