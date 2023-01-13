@@ -60,8 +60,6 @@ section.sobre{
     background-color: rgb(24, 38, 158);
 }
 
-.foticos:hover {filter: opacity(.100);} /*{filter: blur(5px);}.....para desenfocar*/
-
 /*Iconoso de redes sociales*/
 .social-media{
     position: absolute;
